@@ -1,0 +1,51 @@
+body{
+    background-color: #efecec;
+    font-family: sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    color: navy;
+
+}
+
+.destaque{
+    color: darkblue;
+    font-weight: bold;
+}
+
+#cabecalho-principal{
+    background-color: #d5d2d2;
+    text-align: center; /* centraliza o cabeçalho*/
+    padding: 20px;
+    
+}
+
+#post-principal{
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: crimson;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+footer{
+    font-size: 14px;
+    text-align: center;
+}
+
+button{
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    border: none;
+}
