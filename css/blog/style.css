@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
 body{
     background-color: #efecec;
     font-family: sans-serif;
@@ -9,6 +15,29 @@ h1, h2 {
 
 }
 
+main{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.post{
+    flex: 2;
+}
+
+.sidebar{
+    flex: 1;
+    background-color: #f4f4f4; 
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#barra-comentario{
+    align-content: flex-end;
+    align-items: flex-end;
+
+}
+
 .destaque{
     color: darkblue;
     font-weight: bold;
@@ -17,8 +46,10 @@ h1, h2 {
 #cabecalho-principal{
     background-color: #d5d2d2;
     text-align: center; /* centraliza o cabeçalho*/
-    padding: 20px;
-    
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #post-principal{
@@ -35,7 +66,11 @@ nav a{
 }
 
 nav ul{
-    list-style: none;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 footer{
