@@ -28,14 +28,22 @@ main{
 .sidebar{
     flex: 1;
     background-color: #f4f4f4; 
-    padding: 15px;
-    border-radius: 5px;
+    padding: 30px;
+    border-radius: 25px;
 }
 
 #barra-comentario{
     align-content: flex-end;
     align-items: flex-end;
+    padding: 25px;
+    border-radius:25px;
+    background-color: #f4f4f4
 
+}
+
+#barra-comentario input,
+#barra-comentario textarea{
+    width: 100%;
 }
 
 .destaque{
@@ -57,6 +65,10 @@ main{
     border: 1px solid #ddd;
     padding: 25px;
     margin: 20px;
+}
+
+#titulo-principal{
+    color: navy;
 }
 
 nav a{
