@@ -58,22 +58,28 @@
             </ul>
         </aside>
 
-        <section class="form1" id="barra-comentario">
+        <section id="barra-comentario">
+
             <h2 > Deixe um comentário:</h2>
-            <form>
+
+            <form id="comment-form">
                 <label for="email">Seu e-mail:</label><br>
                 <input type="email" id="email" name="user_email"><br><br>
 
-                <label for="comment">Seu comentário:</label><br>
-                <textarea id="comment" name="user_comment" rows="4" cols="50"> </textarea>
-                <button type="submit">Enviar</button>
-
+                <label for="comment-input">Seu comentário:</label><br>
+                <textarea id="comment-input" name="user_comment" rows="4" placeholder="escreva seu comentario aqui..." required> </textarea>
+               
+                <button type="submit">Enviar comentário </button>
             </form>
+            <section id="comments-section">
+                <h3>Comentários: </h3>
+            </section>
+
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 - mirelle</p>
+    <footer class="footer">
+        <p>© 2026 - mizi</p>
     </footer>
     
     <script src="script.js"></script>

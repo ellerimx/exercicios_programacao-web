@@ -10,9 +10,8 @@ body{
     color: #333;
 }
 
-h1, h2 {
+h1, h2, h3{
     color: navy;
-
 }
 
 main{
@@ -23,28 +22,79 @@ main{
 
 .post{
     flex: 1;
+    min-width: 0;
 }
 
 .sidebar{
-    flex: 1;
+    flex: 0.25;
     background-color: #f4f4f4; 
     padding: 30px;
     border-radius: 25px;
 }
 
-#barra-comentario{
-    align-content: flex-end;
-    align-items: flex-end;
-    padding: 25px;
-    border-radius:25px;
-    background-color: #f4f4f4
+/*estilizacao da parte dos comentarios*/
 
+#barra-comentario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 25px;
+    align-items: stretch;
+}
+
+#barra-comentario h2{
+    margin-bottom: 5px;
+}
+
+#comment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
 }
 
 #barra-comentario input,
-#barra-comentario textarea{
+#barra-comentario textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: sans-serif;
 }
+
+#comment-form button {
+    align-self: flex-start;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#comments-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
+
+#comments-section h3 {
+    margin-bottom: 15px;
+}
+
+#comments-section p {
+    background-color: #f4f4f4;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* =======================*/
 
 .destaque{
     color: darkblue;
@@ -65,7 +115,45 @@ main{
     border: 1px solid #ddd;
     padding: 25px;
     margin: 20px;
+    margin: 0;
+    line-height: 1.5;
 }
+
+/* espaçamentos entre o conteudo do post princpal */
+#post-principal h2 {
+    margin-bottom: 20px;
+}
+
+#post-principal h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#post-principal p {
+    margin-bottom: 18px;
+}
+
+#post-principal figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+#post-principal figure img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+}
+
+#post-principal figcaption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* =================== */
 
 #titulo-principal{
     color: navy;
@@ -95,4 +183,19 @@ button{
     color: white;
     padding: 10px;
     border: none;
+}
+ 
+/* imagem */
+.post figure img{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+.footer{
+    color: red;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 30px;
 }

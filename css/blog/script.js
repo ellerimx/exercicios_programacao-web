@@ -49,5 +49,49 @@ function addBordaPost(){
     const postPrincipal = document.querySelector(".post");
     postPrincipal.style.border = "8px solid red";
 }
-
 addBorda.addEventListener("click", addBordaPost);
+
+function saudar(nome){
+    console.log("oi, " +nome+"seja bem vindo!");
+}
+saudar("mizi");
+
+function somar(a,b){
+    const result = a+b;
+    console.log("o resultado é = "+result);
+}
+somar(5,5);
+
+function somarComRetorno(a,b){
+    return a+b;
+}
+
+// comentarios
+const form = document.querySelector("#comment-form");
+const commentInput = document.querySelector("#comment-input");
+const commentsSection = document.querySelector("#comments-section")
+
+function addComentario(event){
+    //a pag n recarrega quando envia o formulario
+    event.preventDefault();
+    //console.log("formulario enviado sem recarregar");
+
+    //pega o texto digitado pelo usuario
+    const textoDoComentario = commentInput.value;
+
+    if(textoDoComentario == ""){
+        alert("digite um comentário antes de enviar ;))");
+        return;
+    }
+
+    //cria novo paragrafo
+    const novoParagrafo = document.createElement("p");
+    novoParagrafo.textContent = textoDoComentario;
+
+    //add comentario na seção de comentarios
+    commentsSection.appendChild(novoParagrafo);
+
+    commentInput.value="";
+}
+
+form.addEventListener('submit', addComentario);
