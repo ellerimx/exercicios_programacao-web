@@ -3,36 +3,96 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculadora</title>
+        <title>arodaluclac</title>
         <link rel="stylesheet" href="style.css">
         
     </head>
     <body> 
-        <header>
-        <h1>Título</h1>       
 
-        </header> 
+        <main class="janela">
+            <header class="barra-titulo">
+            <h1>:::::: ma calculatrice ::::::</h1>
+        </header>
 
-        <main>
-            <section class="form1" id="barra-comentario">
-            <h2 > Deixe um comentário:</h2>
-            <form>
-                <label for="email">Seu e-mail:</label><br>
-                <input type="email" id="email" name="user_email"<br><br>
-                
-                <label for="comment">Seu comentário:</label><br>
-                <textarea id="comment" name="user_comment" rows="4" cols="50"> </textarea>
-                
-                <button type="submit">Enviar</button>
+        <div class="conteudo">
 
-            </form>
-        </section>
+            <div class="menu">
+                <button type="button" id="btn-historico">🕘 histórico</button>
+            </div>
+
+            <section class="visor">
+                <div id="expressao">0</div>
+                <div id="resultado"></div>
+            </section>
+
+            <section class="botoes">
+                <button class="especial" data-action="clear">C</button>
+                <button class="especial" data-action="backspace">del</button>
+                <button class="operador" data-value="÷">÷</button>
+                <button class="operador" data-value="×">×</button>
+
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button class="operador" data-value="-">−</button>
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button class="operador" data-value="+">+</button>
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button class="igual" data-action="equals">=</button>
+
+                <button class="zero" data-value="0">0</button>
+                <button data-value=",">,</button>
+
+            </section>
+
+            <section id="painel-historico" hidden>
+                <div class="titulo-historico">
+                    <strong>🕘 histórico de cálculos</strong>
+                    <button type="button" id="fechar-historico">×</button>
+                </div>
+
+                <div id="lista-historico">
+                    <p>nenhuma conta ainda!</p>
+                </div>
+
+                <button type="button" id="limpar-historico" class="limpar-historico">limpar histórico</button>
+
+            </section>
+            </div>
 
         </main>
-        
-        
-    </body>
-    <script src="script.js" ></script>
 
+        <section class="form" id="barra-comentario">
+            <h2 >deixe um comentário:</h2>
+
+            <form id="form-comentario">
+                <label for="nome">seu nome:</label><br>
+                <input type="text" id="nome" name="comment-name">
+                
+                <label for="comment">seu comentário:</label><br>
+                <textarea id="comment" name="user_comment" rows="4"> </textarea>
+                
+                <button type="submit">enviar ;)))</button>
+            </form>
+
+            <div id="lista-comentarios">
+                <h3>comentários</h3>
+                <p>nenhum comentário ainda :c</p>
+         </div>
+        </section>
+        
+        <footer class="rodape"> mizi </footer> 
+
+        <div class="gif-canto">
+            <img src="https://i.pinimg.com/originals/e1/c5/16/e1c516c1b5a59b08eb847ae510512f08.gif" alt="gif">
+        </div>
+
+    </body>
+    
+    <script src="script.js" ></script>
 
 </html>

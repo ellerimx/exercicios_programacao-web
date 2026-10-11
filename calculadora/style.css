@@ -1,0 +1,323 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px;
+    background-color: #4e9883;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #13604a;
+    display: grid;
+    grid-template-columns: 370px 270px;
+    grid-template-areas:
+        "calculadora comentarios"
+        "rodape rodape";
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.janela {
+    grid-area: calculadora;
+    width: 370px;
+    max-width: 100%;
+    background-color: #a1e1cf;
+    border: 3px solid #5dcaab;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 #044c38;
+    overflow: hidden;
+}
+
+.barra-titulo {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #044c38;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.conteudo {
+    padding: 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 12px;
+}
+
+.menu button {
+    margin-left: auto;
+    padding: 5px;
+}
+
+.visor {
+    min-height: 95px;
+    padding: 12px;
+    background-color: #c9e1d7;
+    border: 2px inset #a2d7c5;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+#expressao {
+    min-height: 27px;
+    font-size: 20px;
+    color: #397b66;
+}
+
+#resultado {
+    margin-top: 8px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #044c38;
+}
+
+.mensagem {
+    margin: 12px 0;
+    text-align: center;
+    font-size: 11px;
+}
+
+button {
+    font-family: Tahoma, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+     margin-top:7px;
+}
+
+#btn-historico {
+    min-height: 13px;
+    background-color: #daf0e9;
+    color: #044c38;
+    border: 1px solid #5d9d89;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#btn-historico:hover {
+    background-color: #a1e1cf;
+}
+
+.botoes button,
+.menu button,
+.limpar-historico{
+    min-height: 40px;
+    background-color: #daf0e9;
+    color: #044c38;
+    border: 1px solid #5d9d89;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.botoes button:hover,
+.menu button:hover,
+.limpar-historico:hover {
+    background-color: #c4ebde;
+}
+
+.botoes button:active {
+    background-color: #80c9b2;
+}
+
+.botoes .operador {
+    background-color: #a1e1cf;
+    font-weight: bold;
+}
+
+.botoes .especial {
+    background-color: #80c9b2;
+}
+
+.botoes .igual {
+    grid-row: span 2;
+    background-color: #13604a;
+    color: white;
+    font-weight: bold;
+}
+
+.botoes .igual:hover {
+    background-color: #044c38;
+}
+
+.botoes .zero {
+    grid-column: span 2;
+}
+
+#painel-historico {
+    margin-top: 14px;
+    padding: 10px;
+    background-color: #c4ebde;
+    border: 2px inset #80bda9;
+}
+
+#painel-historico[hidden] {
+    display: none;
+}
+
+.titulo-historico {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#fechar-historico {
+    padding: 4px 8px;
+    background-color: #c5e8dc;
+    border: 1px solid #5d9d89;
+}
+
+#lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#lista-historico p {
+    font-size: 12px;
+}
+
+.item-historico {
+    width: 100%;
+    padding: 8px;
+    background-color: #e4f6ee;
+    border: 1px solid #80bda9;
+    color: #13604a;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.item-historico:hover {
+    background-color: #c5e8dc;
+}
+
+.limpar-historico {
+    width: 100%;
+    min-height: 32px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#barra-comentario {
+    grid-area: comentarios;
+    width: 200px;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #a1e1cf;
+    border: 2px solid #13604a;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 #044c38;
+    align-self: center;
+}
+
+#barra-comentario h2 {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#barra-comentario form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#barra-comentario label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#barra-comentario input,
+#barra-comentario textarea {
+    width: 100%;
+    padding: 2px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    background-color: #f5fffb;
+    border: 1px solid #13604a;
+    border-radius: 4px;
+    margin-top: -25px;
+}
+
+#barra-comentario button {
+    padding: 5px;
+    background-color: #13604a;
+    color: white;
+    border: 1px solid #044c38;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#barra-comentario button:hover {
+    background-color: #044c38;
+}
+
+#lista-comentarios {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #5d9d89;
+    overflow-wrap: anywhere;
+}
+
+#lista-comentarios h3 {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#lista-comentarios p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.comentario {
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #d8f1e8;
+    border: 1px solid #80c9b2;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.comentario p {
+    margin-top: 5px;
+    white-space: pre-wrap;
+}
+
+.rodape {
+    grid-area: rodape;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.gif-canto {
+    position: fixed;
+    right: 150px;
+    bottom: 200px;
+    width: 200px;
+
+}
+
+.gif-canto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
