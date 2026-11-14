@@ -1,0 +1,14 @@
+.headerContainer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background-color: #0070f3;
+color: white;
+}
+.navLinks a {
+margin-left: 1.5rem;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
