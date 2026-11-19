@@ -17,6 +17,7 @@ Exercícios e exemplos feitos em sala nas aulas de Programação Web :D
 | 09 | Next.js: componentes reutilizáveis, props, CSS Modules e rotas com App Router | [`meu-primeiro-app-next/`](meu-primeiro-app-next/) |
 | 10 | Hooks: `useState`, Client Components e componentes controlados | [`meu-primeiro-app-next/`](meu-primeiro-app-next/) |
 | 11 | Consumo de APIs: `fetch`, `async/await`, `useEffect`, estados de loading e erro | [`meu-primeiro-app-next/`](meu-primeiro-app-next/) |
+| 12 | Introdução ao back-end e Node.js: REPL, módulos CommonJS, `fs` e npm | [`aula-node/`](aula-node/) |
 
 ## Pastas
 
@@ -26,6 +27,7 @@ Exercícios e exemplos feitos em sala nas aulas de Programação Web :D
 | [`css/blog/`](css/blog/) | "Meu Blog de Tecnologia": HTML semântico, estilos, layout Flexbox, DOM e formulário de comentários | HTML, CSS, JavaScript |
 | [`calculadora/`](calculadora/) | Desafio da aula 6: calculadora com histórico de contas | HTML, CSS, JavaScript |
 | [`meu-primeiro-app-next/`](meu-primeiro-app-next/) | Blog em Next.js com componentes, props, CSS Modules, rotas, `useState`, `useEffect` e consumo de API | React, Next.js |
+| [`aula-node/`](aula-node/) | Calculadora modular no terminal, criação de arquivos com `fs` e uso do npm | Node.js |
 
 ## Como abrir
 
@@ -39,3 +41,10 @@ Exercícios e exemplos feitos em sala nas aulas de Programação Web :D
   ```
 
   e abra [http://localhost:3000](http://localhost:3000).
+- **Projeto Node.js** (`aula-node`): roda no terminal, veja o [README da aula](aula-node/README.md):
+
+  ```bash
+  cd aula-node
+  npm install
+  npm start
+  ```

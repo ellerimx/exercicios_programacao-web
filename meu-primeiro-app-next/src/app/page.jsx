@@ -1,3 +1,8 @@
+
+'use client';
+
+import { useState, useEffect } from 'react';
+
 import PostCard from '@/components/PostCard';
 import Sidebar from '@/components/Sidebar';
 import CommentSection from '@/components/CommentSection';
@@ -11,6 +16,23 @@ const meusPosts = [
 ];
 
 export default function Home() {
+
+  const[meusPosts, setMeusPosts] = useState([]);
+
+  useEffect(() => {
+    const buscarPosts = async () => {
+      try {
+        const resposta = await fetch('/api/posts');
+        const dados = await resposta.json();
+        setMeusPosts(dados);
+      } catch (erro) {
+        console.error('Erro ao buscar posts:', erro);
+      }
+    };
+
+    buscarPosts();
+  }, []);
+
   return (
     <main className={styles.container}>
       <article className={styles.mainContent}>
